@@ -1,0 +1,46 @@
+---
+title: "Assignment 1"
+author: "Sai Sree Pulimamidi"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Scatterplot between sales and price
+```{r}
+library(ISLR)
+data<- Carseats
+print(Carseats)
+
+```
+
+```{r}
+
+
+plot(Carseats$Sales, Carseats$Price, main = "Scatterplot between Price and Sales", xlab = "Sales", ylab = "Price",abline(Carseats$Sales,Carseats$Price))
+barplot(Carseats$Price)
+```
+
+#maximum value attribute of advertisement
+```{r}
+max(Carseats$Advertising)
+```
+
+#summary of carseats
+```{r}
+summary(data)
+```
+
+#Interquartile range of price
+```{r}
+IQR(Carseats$Price)
+```
+
